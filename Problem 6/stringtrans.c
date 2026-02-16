@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+// String Reversal function
 void reverse(char *str) {
     int len = strlen(str);
     for (int i = 0; i < len/2; i++) {
@@ -25,6 +25,7 @@ void reverse(char *str) {
     }
 }
 
+// String Transformation function
 void trans_string(char *str, void (*trans)(char*)) {
     printf("Original: %s\n", str);
     trans(str);
@@ -37,7 +38,7 @@ int main(void) {
     int read_len;
 
     printf("Enter a string: ");
-    read_len = getline(&input, &len, stdin);
+    read_len = getline(&input, &len, stdin); // Might be a better way to do this
     if (input[read_len - 1] == '\n') {
         input[read_len - 1] = '\0';
     }

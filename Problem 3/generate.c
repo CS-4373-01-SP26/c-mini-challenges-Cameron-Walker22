@@ -22,7 +22,7 @@ int main(void) {
     // Write matrix dimensions
     fprintf(fp, "%d %d\n", n, n);
 
-    // Generate matrix values (small integers to avoid overflow)
+    // Generate matrix values (Small Integers)
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             fprintf(fp, "%d ", rand() % 10);
