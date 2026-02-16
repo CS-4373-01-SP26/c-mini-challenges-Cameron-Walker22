@@ -72,10 +72,9 @@ int main(void) {
     }
 
     clock_t end = clock();
-    double elapsed_time = (double)(end - start) / CLOCKS_PER_SEC;
 
-    // Print Elapsed Time
-    printf("Time: %f seconds\n", elapsed_time);
+    // Print Clocks
+    printf("Clocks: %ld \n", end-start);
 
     // Print Resultant Vector
     for (int i = 0; i < numrows; i++) {

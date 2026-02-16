@@ -29,10 +29,9 @@ int main(void) {
         double pi_upper = n*tan(theta); // Circumscribed Polygon
 
         clock_t end = clock();
-        double elapsed = ((double) (end-start)) / CLOCKS_PER_SEC; // Elapsed Time
 
-        printf("n = %d, pi_lower = %f, pi_upper = %f, diff = %f, time = %f s\n",
-                n, pi_lower, pi_upper, pi_upper - pi_lower, elapsed);
+        printf("n = %d, pi_lower = %f, pi_upper = %f, diff = %f, clocks = %ld \n",
+                n, pi_lower, pi_upper, pi_upper - pi_lower, end-start);
 
         n *= 2;
     }
